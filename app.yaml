@@ -1,0 +1,19 @@
+# Yaml file responsable deployning Java app to GCP app Engine
+
+# The service is for creating a unique URL for the app
+service: java-be
+
+runtime: java11
+#instance_class: F1
+env: standard
+
+handlers:
+  - url: /(.*\..+)$
+    script: auto
+
+health_check:
+  enable_health_check: False
+
+#basic_scaling:
+#  max_instances: 3
+#  idle_timeout: 10m
