@@ -1,15 +1,15 @@
-#spring:
-#  security:
-#    oauth2:
-#      client:
-#        registration:
-#          google:
-#            client-id: 921223709112-1jjqhh9bsg31u3hq6v05dcrgm9ta9i88.apps.googleusercontent.com
-#            client-secret: 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
-#            redirectUri: https://java-be-dot-pg-ae-n-app-662190.uc.r.appspot.com/login/oauth2/code/google
-#            scope:
-#              - email
-#              - profile
+spring:
+  security:
+    oauth2:
+      client:
+        registration:
+          google:
+            client-id: 921223709112-1jjqhh9bsg31u3hq6v05dcrgm9ta9i88.apps.googleusercontent.com
+            client-secret: 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
+            redirectUri: https://java-be-dot-pg-ae-n-app-662190.uc.r.appspot.com/login/oauth2/code/google
+            scope:
+              - email
+              - profile
 #  datasource:
 #    driverClassName: com.mysql.cj.jdbc.Driver
 #    url: jdbc:mysql://localhost:3306/pwcoffering
