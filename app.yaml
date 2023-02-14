@@ -14,6 +14,9 @@ handlers:
 health_check:
   enable_health_check: False
 
-basic_scaling:
-  max_instances: 3
-  idle_timeout: 10m
+automatic_scaling:
+  min_instances: 3
+  max_instances: 5
+  cool_down_period_sec: 180
+  cpu_utilization:
+    target_utilization: 0.5
