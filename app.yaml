@@ -4,6 +4,8 @@
 service: java-be
 
 runtime: java11
+
+# Choose instance class
 instance_class: F1
 env: standard
 
