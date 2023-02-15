@@ -15,5 +15,5 @@ health_check:
   enable_health_check: False
 
 basic_scaling:
-  min_instances: 2
   max_instances: 5
+  idle_timeout: 10m
