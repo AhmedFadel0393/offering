@@ -5,7 +5,7 @@ service: java-be
 
 runtime: java11
 instance_class: F1
-env: flex
+env: standard
 
 handlers:
   - url: /(.*\..+)$
