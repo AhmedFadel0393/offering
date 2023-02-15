@@ -15,5 +15,6 @@ health_check:
   enable_health_check: False
 
 automatic_scaling:
-  min_instances: 2
-  max_instances: 5
+  cool_down_period: 180s
+  cpu_utilization:
+    target_utilization: 0.5
