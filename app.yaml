@@ -1,9 +1,11 @@
 # Yaml file responsable deployning Java app to GCP app Engine
 
-# The service is for creating a unique URL for the app
+runtime: java11
+
+# The service deployed
 service: java-be
 
-runtime: java11
+
 instance_class: F2
 env: standard
 
