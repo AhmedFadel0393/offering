@@ -1,12 +1,14 @@
 {
-  "name": "log-viewer",
+  "name": "your-project-name",
   "version": "1.0.0",
-  "description": "View logs from Google App Engine Java app on the web",
+  "description": "your project description",
   "main": "server.js",
-  "dependencies": {
-    "express": "^4.17.2"
-  },
   "scripts": {
-    "start": "node server.js"
+    "start": "node server.js",
+    "build": "echo 'Build script placeholder'"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "child_process": "^1.0.2"
   }
 }
