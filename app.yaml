@@ -1,3 +1,4 @@
+#Logs
 # Yaml file responsible for deploying Java app to GCP App Engine
 
 # The service is for creating a unique URL for the app
