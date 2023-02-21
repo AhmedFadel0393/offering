@@ -1,7 +1,6 @@
-# Cloud build file for trigger and CD
-steps:                        
-  - name: 'gcr.io/cloud-builders/gcloud'
-    args: ['app', 'deploy']
-    
-options:
-  logging: CLOUD_LOGGING_ONLY
+steps:
+- name: 'gcr.io/cloud-builders/npm'
+  args: ['install']
+- name: 'gcr.io/cloud-builders/gcloud'
+  args: ['app', 'deploy']
+timeout: '1600s'
