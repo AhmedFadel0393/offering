@@ -1,6 +1,8 @@
 runtime: nodejs16
 
 service: log-viewer
+instance_class: F1
+env: standard
 
 handlers:
 - url: .*
