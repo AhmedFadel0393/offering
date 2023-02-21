@@ -1,11 +1,14 @@
 {
-  "name": "my-app",
+  "name": "your-project-name",
   "version": "1.0.0",
+  "description": "your project description",
+  "main": "server.js",
   "scripts": {
     "start": "node server.js",
-    "postinstall": "npm install gcloud"
+    "build": "echo 'Build script placeholder'"
   },
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "child_process": "^1.0.2"
   }
 }
