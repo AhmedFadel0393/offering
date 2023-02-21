@@ -5,9 +5,5 @@ steps:
     args: ['run', 'build']
   - name: 'gcr.io/cloud-builders/gcloud'
     args: ['app', 'deploy']
-	
-#	- name: 'gcr.io/cloud-builders/gcloud'
-#    args: ['app', 'deploy', '--no-promote']
-# The -no-promote option is used to prevent the deployed version from serving traffic, as you may want to manually verify the deployed version before promoting it.
 options:
   logging: CLOUD_LOGGING_ONLY
