@@ -1,2 +1,0 @@
-# Offering-Backend
-Java Backend
