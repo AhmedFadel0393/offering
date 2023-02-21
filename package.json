@@ -1,18 +1,4 @@
 {
-  "name": "your-project-name",
-  "version": "1.0.0",
-  "description": "your project description",
-  "main": "server.js",
-  "scripts": {
-    "start": "node server.js",
-    "build": "echo 'Build script placeholder'"
-  },
-  "dependencies": {
-    "express": "^4.17.1",
-    "child_process": "^1.0.2"
-  }
-}
-{
   "name": "my-app",
   "version": "1.0.0",
   "scripts": {
