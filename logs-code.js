@@ -1,36 +1,21 @@
-const {Logging} = require('@google-cloud/logging');
+const express = require('express');
+const { exec } = require('child_process');
+const app = express();
 
-// Instantiates a client
-const logging = new Logging({
-  projectId: 'fadel-test-reactongcp',
+app.get('/', (req, res) => {
+  exec('gcloud app logs tail -s java-be', (error, stdout, stderr) => {
+    if (error) {
+      console.error(`exec error: ${error}`);
+      res.send(`Error: ${error}`);
+      return;
+    }
+    console.log(`stdout: ${stdout}`);
+    console.error(`stderr: ${stderr}`);
+    res.send(`<pre>${stdout}</pre>`);
+  });
 });
 
-// The name of the log to read
-const logName = `appengine.googleapis.com%2Fstdout`;
-
-// Selects the log to read
-const log = logging.log(logName);
-
-// Custom parameters to filter logs by service name
-const serviceName = 'java-be';
-const filter = `resource.type="gae_app" AND resource.labels.module_id="${serviceName}"`;
-
-// Read the most recent 10 log entries
-const options = {
-  filter: filter,
-  limit: 10,
-  order: 'desc',
-};
-
-// Stream the logs to the console
-log
-  .read(options)
-  .then(([entries]) => {
-    console.log(`Logs for service ${serviceName}:`);
-    entries.forEach(entry => {
-      console.log(`[${entry.timestamp.toISOString()}] [${entry.severity}] ${entry.data}`);
-    });
-  })
-  .catch(err => {
-    console.error('ERROR:', err);
-  });
+const PORT = process.env.PORT || 8080;
+app.listen(PORT, () => {
+  console.log(`Listening on port ${PORT}`);
+});

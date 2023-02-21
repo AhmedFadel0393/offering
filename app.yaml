@@ -1,6 +1,7 @@
-runtime: nodejs14
+runtime: nodejs16
+
 service: log-viewer
 
 handlers:
-- url: /.*
+- url: .*
   script: auto
